@@ -19,6 +19,8 @@ public static class ApplicationServiceExtensions
     
 
     services.AddScoped<ITokenService, TokenService>();
+    services.AddScoped<IUserRepository, UserRepository>(); //Pour le rendre injectable dans notre UserController
+    services.AddAutoMapper(AppDomain.CurrentDomain.GetAssemblies());
 
     return services;
   }
